@@ -35,15 +35,15 @@
         border: 1px solid #acabab;
         padding: 1vw;
         border-radius: 14px;
-        background: linear-gradient(gold, green);
+        /*background: linear-gradient(gold, green);*/
     }
-    .categories:hover{
-        box-shadow: 3.5px 3.5px 3px gold, 5px 5px 3px green;
-    }
+    /*.categories:hover{*/
+    /*    box-shadow: 3.5px 3.5px 3px gold, 5px 5px 3px green;*/
+    /*}*/
     .business{
         height: 30vh;
         width: 20vw;
-        border: 1px solid black;
+        /*border: 1px solid black;*/
         flex: 0 0 auto;
     }
     .business_container::-webkit-scrollbar{

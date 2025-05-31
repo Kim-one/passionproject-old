@@ -4,8 +4,8 @@ const Navbar=()=>{
     return (
         <div>
             <nav className={'inline-block w-screen border-b border-solid border-b-gray-100'}>
-                <p className={'float-left'}>876 Explore</p>
-                <ul className={'float-right flex flex-row gap-3'}>
+                <p className={'float-left ml-5'}>876 Explore</p>
+                <ul className={'float-right flex flex-row gap-3 mr-5'}>
                     <li className={'navBar p-2'}>
                         <Link to={'/'} className={'self-center'}>Home</Link>
                     </li>

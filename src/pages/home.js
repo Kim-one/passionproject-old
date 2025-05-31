@@ -1,12 +1,15 @@
 import '../stylesheets/styles.css';
+import { FaBed } from "react-icons/fa";
+import { GrRestaurant } from "react-icons/gr";
+import { MdEmojiTransportation } from "react-icons/md";
+import { FaShoppingBag } from "react-icons/fa";
+import { MdRoomService } from "react-icons/md";
+// import { MdTour } from "react-icons/md";
+import { FaCarSide } from "react-icons/fa";
+
 const Home=()=>{
     return (
         <div>
-            <div className={'line1'}>
-                {/*<hr className={'line1'}/>*/}
-            </div>
-            <div className={'line2'}></div>
-            <div className={'line3'}></div>
             <div className={'home-container top-11 absolute w-screen h-80'}>
                 <div className={'back-img test'}>
                     <h1 className={'text1 font-bold text-center text-white'}>Discover the best of Jamaica</h1>
@@ -20,41 +23,46 @@ const Home=()=>{
                 </div>
                 <div>
                     <div className={'ml-48 mr-48 mt-2'}>
-                        <h1>Featured Businesses</h1>
-                        <div className={'business_container flex flex-row gap-2 overflow-x-scroll flex-nowrap overflow-y-hidden'}>
-                            <div className={'business'}>
+                        <h1 className={'mt-4 font-bold'}>Featured Businesses</h1>
+                        <div className={'business_container mt-4 flex flex-row gap-2 overflow-x-scroll flex-nowrap overflow-y-hidden'}>
+                            <div className={'business h-1/3'}>
                                 <img src={'dunnsriver.jpg'}  alt={'River Falls'}/>
-                                <p>Business 1</p>
+                                <p className={'font-bold'}>Dunn's River Falls</p>
+                                <p className={'text-xs'}>Dunn’s River Falls is one of Jamaica’s national treasures. Globally, it is as well known as reggae and equally stimulating.</p>
                             </div>
                             <div className={'business'}>
                                 <img src={'dunnsriver.jpg'}  alt={'River Falls'}/>
-                                <p>Business 1</p>
+                                <p className={'font-bold'}>Dunn's River Falls</p>
+                                <p className={'text-xs'}>Dunn’s River Falls is one of Jamaica’s national treasures. Globally, it is as well known as reggae and equally stimulating.</p>
                             </div>
                             <div className={'business'}>
                                 <img src={'river.jpg'}  alt={'River Falls'}/>
                                 <p>Business 2</p>
+                                <p className={'text-xs'}>Dunn’s River Falls is one of Jamaica’s national treasures. Globally, it is as well known as reggae and equally stimulating.</p>
                             </div>
                             <div className={'business'}>
                                 <img src={'river.jpg'}  alt={'River Falls'}/>
                                 <p>Business 3</p>
+                                <p className={'text-xs'}>Dunn’s River Falls is one of Jamaica’s national treasures. Globally, it is as well known as reggae and equally stimulating.</p>
                             </div>
                             <div className={'business'}>
                                 <img src={'dunnsriver.jpg'}  alt={'River Falls'}/>
                                 <p>Business 4</p>
+                                <p className={'text-xs'}>Dunn’s River Falls is one of Jamaica’s national treasures. Globally, it is as well known as reggae and equally stimulating.</p>
                             </div>
                         </div>
                     </div>
                 </div>
                 <div className={'mt-8'}>
                     <div className={'ml-48 mr-48 mt-2'}>
-                        <h1>Popular Categories</h1>
-                        <div className={'flex flex-row gap-2'}>
-                            <p className={'categories'}>Restaurants</p>
-                            <p className={'categories'}>Accommodations</p>
-                            <p className={'categories'}>Transportations</p>
-                            <p className={'categories'}>Shopping</p>
-                            <p className={'categories'}>Services</p>
-                            <p className={'categories'}>Tours</p>
+                        <h1 className={'font-bold'}>Popular Categories</h1>
+                        <div className={'flex flex-row gap-2 mt-4'}>
+                            <p className={'categories flex flex-row gap-2'}><GrRestaurant className={'mt-1'}/> Restaurants</p>
+                            <p className={'categories flex flex-row gap-2'}><FaBed className={'mt-1'}/> Accommodations</p>
+                            <p className={'categories flex flex-row gap-2'}><FaCarSide className={'mt-1'}/>Transportations</p>
+                            <p className={'categories flex flex-row gap-2'}><FaShoppingBag className={'mt-1'}/>Shopping</p>
+                            <p className={'categories flex flex-row gap-2'}><MdRoomService className={'mt-1'}/>Services</p>
+                            <p className={'categories flex flex-row gap-2'}><MdEmojiTransportation className={'mt-1'}/>Tours</p>
                         </div>
                     </div>
                 </div>
