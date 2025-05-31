@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components{
+    .text1{
+        font-size: 8vh;
+    }
+    .text2{
+        font-size: 3vh;
+    }
+    .back-img{
+        background: url("C:\Users\kimon\PassionProject\passionproject\public\jamaica-river-raft.avif");
+        width: 70vw;
+        height: 60vh;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 30px;
+        /*justify-self: center;*/
+    }
+    .test{
+        align-content: center;
+    }
+    .navBar:hover{
+        background-color: #aeabab;
+        @apply p-2;
+    }
+    .addBtn{
+        @apply px-2.5 bg-yellow-400 rounded-3xl;
+    }
+    .register{
+        @apply px-2.5 rounded-3xl bg-slate-300;
+    }
+    .categories{
+        border: 1px solid #acabab;
+        padding: 1vw;
+        border-radius: 14px;
+        background: linear-gradient(gold, green);
+    }
+    .categories:hover{
+        box-shadow: 3.5px 3.5px 3px gold, 5px 5px 3px green;
+    }
+    .business{
+        height: 30vh;
+        width: 20vw;
+        border: 1px solid black;
+        flex: 0 0 auto;
+    }
+    .business_container::-webkit-scrollbar{
+        display: none;
+    }
+}
+
+.line1{
+    position: relative;
+    top:100vh;
+    color: black;
+    height: 5px;
+}

@@ -6,6 +6,9 @@ import Contact from "./pages/contact";
 import Navbar from "./pages/navbar";
 import Signin from "./pages/signin";
 import NoPage from "./pages/NoPage";
+import AddBusiness from "./pages/add_business";
+import Featured from "./pages/featured";
+import Categories from "./pages/categories";
 
 export default function App(){
     return(
@@ -13,9 +16,12 @@ export default function App(){
             <Routes>
                 <Route path='/' element={<Navbar/>}>
                     <Route index element={<Home />} />
-                    <Route path='about' element={<About />} />
-                    <Route path='contact' element={<Contact/>} />
-                    <Route path='signin' element={<Signin/>} />
+                    <Route path={'about'} element={<About />} />
+                    <Route path={'contact'} element={<Contact/>} />
+                    <Route path={'signin'} element={<Signin/>} />
+                    <Route path={'add-business'} element={<AddBusiness/>}/>
+                    <Route path={'featured'} element={<Featured/>}/>
+                    <Route path={'categories'} element={<Categories/>}/>
                     <Route path={'*'} element={<NoPage/>}/>
                 </Route>
             </Routes>
