@@ -16,7 +16,7 @@ const Home=()=>{
                     <h1 className={'text2 text-center text-white'}>Find amazing local businesses, from cozy cafes to thrilling adventures, all in one place.</h1>
                     <div className={'text-center'}>
                         <span>
-                            <input className={'w-6/12 rounded-2xl h-10 border-none'} placeholder={'Search for business, services, or location'}/>
+                            <input type={'text'} className={'w-6/12 rounded-2xl h-10 border-none'} placeholder={'Search for business, services, or location'}/>
                             <button className={'p-1 px-2.5 bg-green-400 rounded-xl relative -left-20'}>Search</button>
                         </span>
                     </div>
@@ -37,17 +37,17 @@ const Home=()=>{
                             </div>
                             <div className={'business'}>
                                 <img src={'river.jpg'}  alt={'River Falls'}/>
-                                <p>Business 2</p>
+                                <p className={'font-bold'}>Business 2</p>
                                 <p className={'text-xs'}>Dunn’s River Falls is one of Jamaica’s national treasures. Globally, it is as well known as reggae and equally stimulating.</p>
                             </div>
                             <div className={'business'}>
                                 <img src={'river.jpg'}  alt={'River Falls'}/>
-                                <p>Business 3</p>
+                                <p className={'font-bold'}>Business 3</p>
                                 <p className={'text-xs'}>Dunn’s River Falls is one of Jamaica’s national treasures. Globally, it is as well known as reggae and equally stimulating.</p>
                             </div>
                             <div className={'business'}>
                                 <img src={'dunnsriver.jpg'}  alt={'River Falls'}/>
-                                <p>Business 4</p>
+                                <p className={'font-bold'}>Business 4</p>
                                 <p className={'text-xs'}>Dunn’s River Falls is one of Jamaica’s national treasures. Globally, it is as well known as reggae and equally stimulating.</p>
                             </div>
                         </div>
