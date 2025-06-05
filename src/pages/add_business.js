@@ -1,7 +1,10 @@
 import '../stylesheets/styles.css';
 import {useState} from "react";
+import {useNavigate} from "react-router-dom";
+// import Home from './home';
 
 const AddBusiness = () => {
+    const navigate = useNavigate();
     const [businessName, setName] = useState('');
     const [description, setDescription] = useState('');
     const [category, setCategory] = useState('');
@@ -21,6 +24,7 @@ const AddBusiness = () => {
         });
         const data = await response.json();
         console.log(data);
+        // <Home></Home>
     };
 
     return (
@@ -84,7 +88,10 @@ const AddBusiness = () => {
                 {/*    <p className={'text-center'}>Upload up to 5 photos that best represent your business</p>*/}
                 {/*    <input type={'file'} placeholder={'Browse files'} className={'ml-28 mt-2'}/>*/}
                 {/*</div>*/}
-                <button type={'submit'} className={'p-1 bg-green-400 ml-32 mr-32 mt-2 rounded-xl flex-nowrap'}>Submit Business</button>
+                <button type={'submit'}
+                        className={'p-1 bg-green-400 ml-32 mr-32 mt-2 rounded-xl flex-nowrap'}
+                        onClick={()=> navigate('/')}
+                >Submit Business</button>
             </form>
         </div>
     );

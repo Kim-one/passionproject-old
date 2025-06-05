@@ -6,8 +6,26 @@ import { FaShoppingBag } from "react-icons/fa";
 import { MdRoomService } from "react-icons/md";
 // import { MdTour } from "react-icons/md";
 import { FaCarSide } from "react-icons/fa";
+import {useEffect, useState} from "react";
 
 const Home=()=>{
+    const [data, setData] = useState([]);
+
+    useEffect(() => {
+        fetch('http://localhost:5000')
+            .then((res)=>{
+                return res.json();
+            })
+            .then((data)=>{
+                setData(data)
+                console.log(data)
+                // console.log(typeof(data))
+            })
+            .catch((error)=>{
+                console.log("Error fetching data: ", error)
+            })
+    }, []);
+
     return (
         <div>
             <div className={'home-container top-11 absolute w-screen h-80'}>
@@ -25,31 +43,37 @@ const Home=()=>{
                     <div className={'ml-48 mr-48 mt-2'}>
                         <h1 className={'mt-4 font-bold'}>Featured Businesses</h1>
                         <div className={'business_container mt-4 flex flex-row gap-2 overflow-x-scroll flex-nowrap overflow-y-hidden'}>
-                            <div className={'business h-1/3'}>
-                                <img src={'dunnsriver.jpg'}  alt={'River Falls'}/>
-                                <p className={'font-bold'}>Dunn's River Falls</p>
-                                <p className={'text-xs'}>Dunn’s River Falls is one of Jamaica’s national treasures. Globally, it is as well known as reggae and equally stimulating.</p>
-                            </div>
-                            <div className={'business'}>
-                                <img src={'dunnsriver.jpg'}  alt={'River Falls'}/>
-                                <p className={'font-bold'}>Dunn's River Falls</p>
-                                <p className={'text-xs'}>Dunn’s River Falls is one of Jamaica’s national treasures. Globally, it is as well known as reggae and equally stimulating.</p>
-                            </div>
-                            <div className={'business'}>
-                                <img src={'river.jpg'}  alt={'River Falls'}/>
-                                <p className={'font-bold'}>Business 2</p>
-                                <p className={'text-xs'}>Dunn’s River Falls is one of Jamaica’s national treasures. Globally, it is as well known as reggae and equally stimulating.</p>
-                            </div>
-                            <div className={'business'}>
-                                <img src={'river.jpg'}  alt={'River Falls'}/>
-                                <p className={'font-bold'}>Business 3</p>
-                                <p className={'text-xs'}>Dunn’s River Falls is one of Jamaica’s national treasures. Globally, it is as well known as reggae and equally stimulating.</p>
-                            </div>
-                            <div className={'business'}>
-                                <img src={'dunnsriver.jpg'}  alt={'River Falls'}/>
-                                <p className={'font-bold'}>Business 4</p>
-                                <p className={'text-xs'}>Dunn’s River Falls is one of Jamaica’s national treasures. Globally, it is as well known as reggae and equally stimulating.</p>
-                            </div>
+                            {data.map((businesses, index)=>(
+                                <div key={index} className={'business'}>
+                                    <p className={'font-bold'}>{businesses[0]}</p>
+                                    <p className={'text-xs'}>{businesses[1]}</p>
+                                </div>
+                            ))}
+                            {/*<div className={'business h-1/3'}>*/}
+                            {/*    <img src={'dunnsriver.jpg'}  alt={'River Falls'}/>*/}
+                            {/*    <p className={'font-bold'}>Dunn's River Falls</p>*/}
+                            {/*    <p className={'text-xs'}>Dunn’s River Falls is one of Jamaica’s national treasures. Globally, it is as well known as reggae and equally stimulating.</p>*/}
+                            {/*</div>*/}
+                            {/*<div className={'business'}>*/}
+                            {/*    <img src={'dunnsriver.jpg'}  alt={'River Falls'}/>*/}
+                            {/*    <p className={'font-bold'}>Dunn's River Falls</p>*/}
+                            {/*    <p className={'text-xs'}>Dunn’s River Falls is one of Jamaica’s national treasures. Globally, it is as well known as reggae and equally stimulating.</p>*/}
+                            {/*</div>*/}
+                            {/*<div className={'business'}>*/}
+                            {/*    <img src={'river.jpg'}  alt={'River Falls'}/>*/}
+                            {/*    <p className={'font-bold'}>Business 2</p>*/}
+                            {/*    <p className={'text-xs'}>Dunn’s River Falls is one of Jamaica’s national treasures. Globally, it is as well known as reggae and equally stimulating.</p>*/}
+                            {/*</div>*/}
+                            {/*<div className={'business'}>*/}
+                            {/*    <img src={'river.jpg'}  alt={'River Falls'}/>*/}
+                            {/*    <p className={'font-bold'}>Business 3</p>*/}
+                            {/*    <p className={'text-xs'}>Dunn’s River Falls is one of Jamaica’s national treasures. Globally, it is as well known as reggae and equally stimulating.</p>*/}
+                            {/*</div>*/}
+                            {/*<div className={'business'}>*/}
+                            {/*    <img src={'dunnsriver.jpg'}  alt={'River Falls'}/>*/}
+                            {/*    <p className={'font-bold'}>Business 4</p>*/}
+                            {/*    <p className={'text-xs'}>Dunn’s River Falls is one of Jamaica’s national treasures. Globally, it is as well known as reggae and equally stimulating.</p>*/}
+                            {/*</div>*/}
                         </div>
                     </div>
                 </div>

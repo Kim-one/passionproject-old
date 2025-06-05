@@ -43,7 +43,7 @@
     .business{
         height: 30vh;
         width: 20vw;
-        /*border: 1px solid black;*/
+        border: 1px solid black;
         flex: 0 0 auto;
     }
     .business_container::-webkit-scrollbar{
