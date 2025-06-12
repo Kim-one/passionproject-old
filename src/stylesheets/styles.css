@@ -37,9 +37,6 @@
         border-radius: 14px;
         /*background: linear-gradient(gold, green);*/
     }
-    /*.categories:hover{*/
-    /*    box-shadow: 3.5px 3.5px 3px gold, 5px 5px 3px green;*/
-    /*}*/
     .business{
         height: 30vh;
         width: 20vw;
@@ -48,6 +45,22 @@
     }
     .business_container::-webkit-scrollbar{
         display: none;
+    }
+    .category-links{
+        display: block;
+        background-color: white;
+        opacity: 70%;
+        /*position: absolute;*/
+    }
+    .dropdown-categories:hover .dropdown{
+        display: block;
+        /*cursor: pointer;*/
+    }
+    .dropdown-categories:hover{
+        cursor: pointer;
+    }
+    .category-links:hover{
+        background-color: #aeabab;
     }
 }
 

@@ -1,5 +1,5 @@
 import {Link, Outlet} from "react-router-dom";
-// import '../stylesheets/styles.css';
+import '../stylesheets/styles.css';
 const Navbar=()=>{
     return (
         <div>
@@ -9,8 +9,15 @@ const Navbar=()=>{
                     <li className={'navBar p-2'}>
                         <Link to={'/'} className={'self-center'}>Home</Link>
                     </li>
-                    <li className={'navBar p-2'}>
-                        <Link to={'/categories'}>Categories</Link>
+                    <li className={'dropdown-categories navBar p-2 inline-block'}>
+                        Categories
+                        <div className={'dropdown absolute h-24 hidden w-64 z-10 mt-2 -ml-2'}>
+                            <Link to={'/restaurants'} className={'category-links'}>Restaurants</Link>
+                            {/*<Link to={'/restaurants'} className={'category-links'}>Accommodation</Link>*/}
+                            {/*<Link to={'/restaurants'} className={'category-links'}>Services</Link>*/}
+                            {/*<Link to={'/restaurants'} className={'category-links'}>Transportation</Link>*/}
+                            {/*<Link to={'/restaurants'} className={'category-links'}>Tours</Link>*/}
+                        </div>
                     </li>
                     <li className={'navBar p-2'}>
                         <Link to={'/featured'}>Featured</Link>

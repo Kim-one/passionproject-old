@@ -8,7 +8,7 @@ import Signin from "./pages/signin";
 import NoPage from "./pages/NoPage";
 import AddBusiness from "./pages/add_business";
 import Featured from "./pages/featured";
-import Categories from "./pages/categories";
+import Restaurants from "./pages/categories/restaurants";
 
 export default function App(){
     return(
@@ -21,7 +21,7 @@ export default function App(){
                     <Route path={'signin'} element={<Signin/>} />
                     <Route path={'add-business'} element={<AddBusiness/>}/>
                     <Route path={'featured'} element={<Featured/>}/>
-                    <Route path={'categories'} element={<Categories/>}/>
+                    <Route path={'restaurants'} element={<Restaurants/>}/>
                     <Route path={'*'} element={<NoPage/>}/>
                 </Route>
             </Routes>

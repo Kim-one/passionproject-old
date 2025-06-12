@@ -18,7 +18,7 @@ const Home=()=>{
             })
             .then((data)=>{
                 setData(data)
-                console.log(data)
+                // console.log(data)
                 // console.log(typeof(data))
             })
             .catch((error)=>{
