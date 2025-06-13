@@ -13,10 +13,11 @@ const Navbar=()=>{
                         Categories
                         <div className={'dropdown absolute h-24 hidden w-64 z-10 mt-2 -ml-2'}>
                             <Link to={'/restaurants'} className={'category-links'}>Restaurants</Link>
-                            {/*<Link to={'/restaurants'} className={'category-links'}>Accommodation</Link>*/}
-                            {/*<Link to={'/restaurants'} className={'category-links'}>Services</Link>*/}
-                            {/*<Link to={'/restaurants'} className={'category-links'}>Transportation</Link>*/}
-                            {/*<Link to={'/restaurants'} className={'category-links'}>Tours</Link>*/}
+                            <Link to={'/accommodations'} className={'category-links'}>Accommodation</Link>
+                            <Link to={'/services'} className={'category-links'}>Services</Link>
+                            <Link to={'/transportation'} className={'category-links'}>Transportation</Link>
+                            <Link to={'/tours'} className={'category-links'}>Tours</Link>
+                            <Link to={'/shopping'} className={'category-links'}>Shopping</Link>
                         </div>
                     </li>
                     <li className={'navBar p-2'}>

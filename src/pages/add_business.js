@@ -12,6 +12,7 @@ const AddBusiness = () => {
     const [phoneNum, setPhoneNum] = useState('');
     const [email, setEmail] = useState('');
     const [website, setWebsite] = useState('');
+    const [image, setImage] = useState('');
 
     const handleSubmit = async (e)=>{
         e.preventDefault();
@@ -46,6 +47,8 @@ const AddBusiness = () => {
                     <option value={'Transportation'}>Transportation</option>
                     <option value={'Accommodation'}>Accommodation</option>
                     <option value={'Tours'}>Tours</option>
+                    <option value={'services'}>Services</option>
+                    <option value={'shopping'}>Shopping</option>
                 </select>
                 <label className={'mt-1'}>Description</label>
                 <textarea className={'border border-gray-400 h-24 rounded mt-1 resize-none focus:outline-0 pl-1'}
@@ -81,13 +84,15 @@ const AddBusiness = () => {
                        onChange={(e) => setWebsite(e.target.value)}
                        required={true}
                 />
-                {/*<label className={'mt-1'}>Upload Photos</label>*/}
-                {/*/!*<input type={'file'} className={'mt-1 border-dashed'} required={true}/>*!/*/}
-                {/*<div className={'dropzone mt-1 border border-gray-400 border-dashed h-36 w-full rounded-xl justify-center items-center'}>*/}
-                {/*    <p className={'text-center mt-4'}>Drag and Drop or Browse</p>*/}
-                {/*    <p className={'text-center'}>Upload up to 5 photos that best represent your business</p>*/}
-                {/*    <input type={'file'} placeholder={'Browse files'} className={'ml-28 mt-2'}/>*/}
-                {/*</div>*/}
+                <label className={'mt-1'}>Upload Photos</label>
+                {/*<input type={'file'} className={'mt-1 border-dashed'} required={true}/>*/}
+                <div className={'dropzone mt-1 border border-gray-400 border-dashed h-36 w-full rounded-xl justify-center items-center'}>
+                    <p className={'text-center mt-4'}>Drag and Drop or Browse</p>
+                    <p className={'text-center'}>Upload up to 5 photos that best represent your business</p>
+                    <input type={'file'} value={image}
+                           onChange={(e)=>setImage(e.target.value)}
+                           placeholder={'Browse files'} className={'ml-28 mt-2'}/>
+                </div>
                 <button type={'submit'}
                         className={'p-1 bg-green-400 ml-32 mr-32 mt-2 rounded-xl flex-nowrap'}
                         onClick={()=> navigate('/')}

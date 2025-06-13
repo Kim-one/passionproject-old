@@ -9,6 +9,7 @@ import NoPage from "./pages/NoPage";
 import AddBusiness from "./pages/add_business";
 import Featured from "./pages/featured";
 import Restaurants from "./pages/categories/restaurants";
+import Accommodation from "./pages/categories/accomadation";
 
 export default function App(){
     return(
@@ -22,6 +23,7 @@ export default function App(){
                     <Route path={'add-business'} element={<AddBusiness/>}/>
                     <Route path={'featured'} element={<Featured/>}/>
                     <Route path={'restaurants'} element={<Restaurants/>}/>
+                    <Route path={'accommodations'} element={<Accommodation/>}/>
                     <Route path={'*'} element={<NoPage/>}/>
                 </Route>
             </Routes>
