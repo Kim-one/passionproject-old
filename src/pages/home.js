@@ -83,10 +83,10 @@ const Home=()=>{
                         <div className={'flex flex-row gap-2 mt-4'}>
                             <a href={'/restaurants'} className={'categories flex flex-row gap-2'}><GrRestaurant className={'mt-1'}/> Restaurants</a>
                             <a href={'/accommodations'} className={'categories flex flex-row gap-2'}><FaBed className={'mt-1'}/> Accommodations</a>
-                            <a href={'/restaurants'} className={'categories flex flex-row gap-2'}><FaCarSide className={'mt-1'}/>Transportations</a>
-                            <a href={'/restaurants'} className={'categories flex flex-row gap-2'}><FaShoppingBag className={'mt-1'}/>Shopping</a>
-                            <a href={'/restaurants'} className={'categories flex flex-row gap-2'}><MdRoomService className={'mt-1'}/>Services</a>
-                            <a href={'/restaurants'} className={'categories flex flex-row gap-2'}><MdEmojiTransportation className={'mt-1'}/>Tours</a>
+                            <a href={'/transportation'} className={'categories flex flex-row gap-2'}><FaCarSide className={'mt-1'}/>Transportations</a>
+                            <a href={'/shopping'} className={'categories flex flex-row gap-2'}><FaShoppingBag className={'mt-1'}/>Shopping</a>
+                            <a href={'/services'} className={'categories flex flex-row gap-2'}><MdRoomService className={'mt-1'}/>Services</a>
+                            <a href={'/tours'} className={'categories flex flex-row gap-2'}><MdEmojiTransportation className={'mt-1'}/>Tours</a>
                         </div>
                     </div>
                 </div>

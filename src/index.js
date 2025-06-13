@@ -8,8 +8,13 @@ import Signin from "./pages/signin";
 import NoPage from "./pages/NoPage";
 import AddBusiness from "./pages/add_business";
 import Featured from "./pages/featured";
+
 import Restaurants from "./pages/categories/restaurants";
 import Accommodation from "./pages/categories/accomadation";
+import Services from "./pages/categories/services";
+import Tours from "./pages/categories/tours";
+import Transportation from "./pages/categories/transportation";
+import Shopping from "./pages/categories/shopping";
 
 export default function App(){
     return(
@@ -24,6 +29,10 @@ export default function App(){
                     <Route path={'featured'} element={<Featured/>}/>
                     <Route path={'restaurants'} element={<Restaurants/>}/>
                     <Route path={'accommodations'} element={<Accommodation/>}/>
+                    <Route path={'services'} element={<Services/>}/>
+                    <Route path={'tours'} element={<Tours/>}/>
+                    <Route path={'transportation'} element={<Transportation/>}/>
+                    <Route path={'shopping'} element={<Shopping/>}/>
                     <Route path={'*'} element={<NoPage/>}/>
                 </Route>
             </Routes>
