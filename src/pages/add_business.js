@@ -12,19 +12,30 @@ const AddBusiness = () => {
     const [phoneNum, setPhoneNum] = useState('');
     const [email, setEmail] = useState('');
     const [website, setWebsite] = useState('');
-    const [image, setImage] = useState('');
+    const [image, setImage] = useState(null);
 
     const handleSubmit = async (e)=>{
         e.preventDefault();
+        const data = new FormData();
+        data.append('businessName', businessName);
+        data.append('description', description);
+        data.append('category',category);
+        data.append('address', address);
+        data.append('phoneNum', phoneNum);
+        data.append('email',email);
+        data.append('website', website);
+        data.append('image', image);
+
         const response = await fetch('http://localhost:5000/add-business',{
             method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify({businessName, description, category, address, phoneNum, email, website, image})
+            // headers: {
+            //     'Content-Type': 'application/json',
+            // },
+            // body: JSON.stringify({businessName, description, category, address, phoneNum, email, website, image})
+            body: data
         });
-        const data = await response.json();
-        console.log(data);
+        const resdata = await response.json();
+        console.log(resdata);
         // <Home></Home>
     };
 

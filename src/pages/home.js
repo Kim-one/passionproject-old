@@ -45,6 +45,7 @@ const Home=()=>{
                         <div className={'business_container mt-4 flex flex-row gap-2 overflow-x-scroll flex-nowrap overflow-y-hidden'}>
                             {data.map((businesses, index)=>(
                                 <div key={index} className={'business'}>
+                                    <img src={`http://localhost:5000/upload/${businesses[2]}`} alt={'Company images'} className={'h-40 w-full'}/>
                                     <p className={'font-bold'}>{businesses[0]}</p>
                                     <p className={'text-xs'}>{businesses[1]}</p>
                                 </div>
@@ -96,3 +97,4 @@ const Home=()=>{
 };
 
 export default Home;
+
