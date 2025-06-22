@@ -21,12 +21,16 @@ const AddBusiness = () => {
             headers: {
                 'Content-Type': 'application/json',
             },
-            body: JSON.stringify({businessName, description, category, address, phoneNum, email, website})
+            body: JSON.stringify({businessName, description, category, address, phoneNum, email, website, image})
         });
         const data = await response.json();
         console.log(data);
         // <Home></Home>
     };
+
+    const handleFile = (e)=>{
+        setImage(e.target.files[0])
+    }
 
     return (
         <div className={'test top-11 absolute w-screen'}>
@@ -89,8 +93,8 @@ const AddBusiness = () => {
                 <div className={'dropzone mt-1 border border-gray-400 border-dashed h-36 w-full rounded-xl justify-center items-center'}>
                     <p className={'text-center mt-4'}>Drag and Drop or Browse</p>
                     <p className={'text-center'}>Upload up to 5 photos that best represent your business</p>
-                    <input type={'file'} value={image}
-                           onChange={(e)=>setImage(e.target.value)}
+                    <input type={'file'}
+                           onChange={handleFile}
                            placeholder={'Browse files'} className={'ml-28 mt-2'}/>
                 </div>
                 <button type={'submit'}
