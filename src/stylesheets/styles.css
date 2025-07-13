@@ -38,9 +38,9 @@
         /*background: linear-gradient(gold, green);*/
     }
     .business{
-        height: 30vh;
+        height: 35vh;
         width: 20vw;
-        border: 1px solid black;
+        /*border: 1px solid black;*/
         flex: 0 0 auto;
     }
     .business_container::-webkit-scrollbar{
@@ -59,8 +59,18 @@
     .dropdown-categories:hover{
         cursor: pointer;
     }
-    .category-links:hover{
+    .category-links:hover {
         background-color: #aeabab;
+    }
+    .search-bar:focus{
+        outline-width: 0;
+    }
+    .parishes{
+        background-color: #d1d5db;
+        opacity: 1;
+        border-radius: 9999px;
+        padding-right: 8px;
+        padding-left: 8px;
     }
 }
 

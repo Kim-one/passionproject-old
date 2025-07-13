@@ -7,6 +7,7 @@ import { MdRoomService } from "react-icons/md";
 // import { MdTour } from "react-icons/md";
 import { FaCarSide } from "react-icons/fa";
 import {useEffect, useState} from "react";
+import { MapContainer, TileLayer, Popup, Marker } from 'react-leaflet'
 
 const Home=()=>{
     const [data, setData] = useState([]);
@@ -28,13 +29,13 @@ const Home=()=>{
 
     return (
         <div>
-            <div className={'home-container top-11 absolute w-screen h-80'}>
+            <div className='home-container top-11 absolute w-screen h-80'>
                 <div className={'back-img test'}>
                     <h1 className={'text1 font-bold text-center text-white'}>Discover the best of Jamaica</h1>
                     <h1 className={'text2 text-center text-white'}>Find amazing local businesses, from cozy cafes to thrilling adventures, all in one place.</h1>
                     <div className={'text-center'}>
                         <span>
-                            <input type={'text'} className={'w-6/12 rounded-2xl h-10 border-none'} placeholder={'Search for business, services, or location'}/>
+                            <input type={'text'} className={'search-bar w-6/12 rounded-2xl h-10 border-none'} placeholder={'Search for business, services, or location'}/>
                             <button className={'p-1 px-2.5 bg-green-400 rounded-xl relative -left-20'}>Search</button>
                         </span>
                     </div>
@@ -77,6 +78,80 @@ const Home=()=>{
                             {/*</div>*/}
                         </div>
                     </div>
+                </div>
+                <div className={'mt-4 mr-48 ml-48 border border-solid border-black'}>
+                    <h1 className={'font-bold'}>Filter by Parish</h1>
+                    <div className={'flex gap-2 flex-wrap'}>
+                        <div className={'parishes'}>
+                            <p>Kingston</p>
+                        </div>
+                        <div className={'parishes'}>
+                            <p>St Thomas</p>
+                        </div>
+                        <div className={'parishes'}>
+                            <p>St Andrew</p>
+                        </div>
+                        <div className={'parishes'}>
+                            <p>Portland</p>
+                        </div>
+                        <div className={'parishes'}>
+                            <p>St James</p>
+                        </div>
+                        <div className={'parishes'}>
+                            <p>St Elizabeth</p>
+                        </div>
+                        <div className={'parishes'}>
+                            <p>Westmoreland</p>
+                        </div>
+                        <div className={'parishes'}>
+                            <p>St Mary</p>
+                        </div>
+                        <div className={'parishes'}>
+                            <p>Trelawny</p>
+                        </div>
+                        <div className={'parishes'}>
+                            <p>Clarendon</p>
+                        </div>
+                        <div className={'parishes'}>
+                            <p>Hanover</p>
+                        </div>
+                        <div className={'parishes'}>
+                            <p>St Ann</p>
+                        </div>
+                        <div className={'parishes'}>
+                            <p>St Catherine</p>
+                        </div>
+                        <div className={'parishes'}>
+                            <p>Manchester</p>
+                        </div>
+                    </div>
+                    <div>
+                        <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+                            <TileLayer
+                                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                            />
+                            <Marker position={[51.505, -0.09]}>
+                                <Popup>
+                                    A pretty CSS3 popup. <br /> Easily customizable.
+                                </Popup>
+                            </Marker>
+                        </MapContainer>
+                    </div>
+                    {/*<p>Kingston</p>*/}
+                    {/*<p>St.Andrew</p>*/}
+                    {/*<p>St Ann</p>*/}
+                    {/*<p>St Thomas</p>*/}
+                    {/*<p>St James</p>*/}
+                    {/*<p>Portland</p>*/}
+                    {/*<p>Manchester</p>*/}
+                    {/*<p>St Elizabeth</p>*/}
+                    {/*<p>Westmoreland</p>*/}
+                    {/*<p>St Mary</p>*/}
+                    {/*<p>Trelawny</p>*/}
+                    {/*<p>Hanover</p>*/}
+                    {/*<p>Clarendon</p>*/}
+                    {/*<p>St Catherine</p>*/}
                 </div>
                 <div className={'mt-8'}>
                     <div className={'ml-48 mr-48 mt-2'}>
