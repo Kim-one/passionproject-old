@@ -7,7 +7,7 @@ import { MdRoomService } from "react-icons/md";
 // import { MdTour } from "react-icons/md";
 import { FaCarSide } from "react-icons/fa";
 import {useEffect, useState} from "react";
-// import { MapContainer, TileLayer, Popup, Marker } from 'react-leaflet';
+import { MapContainer, TileLayer, Popup, Marker } from 'react-leaflet';
 
 const Home=()=>{
     const [data, setData] = useState([]);
@@ -126,17 +126,17 @@ const Home=()=>{
                         </div>
                     </div>
                     <div>
-                        {/*<MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>*/}
-                        {/*    <TileLayer*/}
-                        {/*        attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'*/}
-                        {/*        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"*/}
-                        {/*    />*/}
-                        {/*    <Marker position={[51.505, -0.09]}>*/}
-                        {/*        <Popup>*/}
-                        {/*            A pretty CSS3 popup. <br /> Easily customizable.*/}
-                        {/*        </Popup>*/}
-                        {/*    </Marker>*/}
-                        {/*</MapContainer>*/}
+                        <MapContainer center={[51.505, -0.09]} zoom={13} scrollWheelZoom={false}>
+                            <TileLayer
+                                attribution='&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                                url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                            />
+                            <Marker position={[51.505, -0.09]}>
+                                <Popup>
+                                    A pretty CSS3 popup. <br /> Easily customizable.
+                                </Popup>
+                            </Marker>
+                        </MapContainer>
                     </div>
                     {/*<p>Kingston</p>*/}
                     {/*<p>St.Andrew</p>*/}
