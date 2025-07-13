@@ -7,7 +7,7 @@ import { MdRoomService } from "react-icons/md";
 // import { MdTour } from "react-icons/md";
 import { FaCarSide } from "react-icons/fa";
 import {useEffect, useState} from "react";
-import { MapContainer, TileLayer, Popup, Marker } from 'react-leaflet'
+// import { MapContainer, TileLayer, Popup, Marker } from 'react-leaflet';
 
 const Home=()=>{
     const [data, setData] = useState([]);
