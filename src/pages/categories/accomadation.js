@@ -31,8 +31,9 @@ const Accommodation =()=>{
                 <div className={'flex gap-2 mt-6'}>
                     {category.map((categories, index)=>(
                         <div key={index} className={'border border-black border-solid w-48'}>
+                            {/*<img src={''}/>*/}
                             <p>{categories[0]}</p>
-                            <p>{categories[1]}</p>
+                            {/*<p>{categories[1]}</p>*/}
                         </div>
                     ))}
                 </div>
