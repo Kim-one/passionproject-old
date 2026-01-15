@@ -10,12 +10,13 @@
         font-size: 3vh;
     }
     .back-img{
-        background: url("C:\Users\kimon\PassionProject\passionproject\public\jamaica-river-raft.avif");
+        background: url("/public/river.jpg");
         width: 70vw;
         height: 60vh;
         margin-left: auto;
         margin-right: auto;
         border-radius: 30px;
+        background: no-repeat;
         /*justify-self: center;*/
     }
     .test{
